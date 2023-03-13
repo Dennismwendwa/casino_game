@@ -22,8 +22,12 @@ int main(void)
 
 	int computer1, computer2, computer3;
 	float totalWinning;
-	float bonus;
+	float bonus = 0;
 	int numOfBets = 0;
+	float win1;
+	float win2;
+	float win3;
+	int continueBet = 1;
 
 	rules();
 
@@ -46,14 +50,15 @@ int main(void)
 		printf("\nTry again.");
 	}
 
-	system("clear");
 
+	do {
+	system("clear");
 
 	computer1 = (rand() % 10);
 
 	float bet1;
 	int gess1;
-	float win1;
+	/*float win1;*/
 
 	printf("%d\n", computer1);
 
@@ -98,7 +103,7 @@ int main(void)
 
 	float bet2;
 	int gess2;
-	float win2;
+	/*float win2;*/
 
 	computer2 = (rand() % 10);
 
@@ -148,7 +153,7 @@ int main(void)
 
 	float bet3;
 	int gess3;
-	float win3;
+	/*float win3;*/
 
 	computer3 = (rand() % 10);
 
@@ -191,8 +196,21 @@ int main(void)
 		win3 = 0;
 	}
 
-	bonus = bonusTotalCash();
+	if (numOfBets == 6)
+	{
+		bonus = bonusTotalCash();
+	}
+
 	totalWinning = win1 + win2 + win3 + bonus;
+
+	printf("\n");
+
+	printf("\nDo you want to to continue betting: [1] Yes [0] No.  ");
+	scanf("%d", &continueBet);
+
+
+	} while (continueBet != 0);
+
 
 
 	printf("\n\n");

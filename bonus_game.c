@@ -314,36 +314,4 @@ float bonusTotalCash(void)
 
 
 	return (totalBonus);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
