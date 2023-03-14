@@ -2,16 +2,14 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include <ctype.h>
 
 #include "main.h"
-
-
 
 struct gamers{
 	char name[30];
 	float accountBalance;
 };
-
 
 int main(void)
 {
@@ -31,7 +29,6 @@ int main(void)
 
 	rules();
 
-
 	printf("\n________________WELCOME TO PYGAME.__________________\n\n");
 	printf("\nWhat is your name? ");
 	fgets(user.name, 30, stdin);
@@ -42,12 +39,16 @@ int main(void)
 	if (user.accountBalance < 100)
 	{
 		printf("\nThe minimum amount you can depost is 100.");
-		printf("\nTry again.");
+		printf("\nTry again.\n");
+
+		return (0);
 	}
 	else if (user.accountBalance > 2000)
 	{
 		printf("\nThe maximum money you can depost is 2000.");
-		printf("\nTry again.");
+		printf("\nTry again.\n");
+
+		return (0);
 	}
 
 
@@ -133,8 +134,8 @@ int main(void)
 
 	if (computer2 == gess2)
 	{
-		printf("\n------ Congratulation -----\n");
-		printf("%s you have won the bet.", user.name);
+		printf("\n------ Congratulation -----");
+		printf("\n%s you have won the bet.", user.name);
 
 		win2 = bet2 * 5;
 		user.accountBalance += win2;
@@ -167,7 +168,7 @@ int main(void)
 	{
 		printf("\nInsufficent Balance to bet %.2f.", bet3);
 		printf("\nYour Balance is %.2f.", user.accountBalance);
-		printf("\nBet with Less amount.");
+		printf("\nBet with Less amount.\n");
 
 		return (0);
 	}
@@ -205,15 +206,18 @@ int main(void)
 
 	printf("\n");
 
-	printf("\nDo you want to to continue betting: [1] Yes [0] No.  ");
-	scanf("%d", &continueBet);
+		//printf("\nDo you want to to continue betting: [1] Yes [0] No.  ");
+		//scanf("%d", &continueBet);
+
+		printf("\nDo you want to to continue betting: [1] Yes [0] No.  ");
+		scanf("%d", &continueBet);
 
 
 	} while (continueBet != 0);
 
 
 
-	printf("\n\n");
+	printf("\n");
 
 	totalWin(numOfBets, win1, win2, win3, bonus, totalWinning);
 
