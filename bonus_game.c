@@ -140,7 +140,7 @@ float bonusTotalCash(void)
 			printf("\n4. Barcelona.\t");
 			scanf("%d", &bonus4);
 
-			if (bonus3 == 3)
+			if (bonus4 == 3)
 			{
 				printf("\nYou have won the mini bonus question.");
 				printf("\nYou have won ksh 1000.");
@@ -310,7 +310,6 @@ float bonusTotalCash(void)
 
 	totalBonus = question1 + question2 + question3 + question4 + question5 + 
 		question6 + question7 + question8 + question9 + question10;
-	printf("bonus is %.2f", totalBonus);
 
 
 	return (totalBonus);
