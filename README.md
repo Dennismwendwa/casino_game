@@ -1,4 +1,5 @@
 ======= Casino Game || PYGAME =======
+
 Contributors: Dennis Mwendwa
 
 Language Used: C.
